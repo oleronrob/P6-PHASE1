@@ -1,0 +1,198 @@
+/*
+gestion de la taille des écrans
+
+case vide
+case joueur 1
+case joueur 2
+case mur
+
+arme 1
+arme 2
+arme 3
+arme 4
+arme 5
+
+combat
+
+bandeau de titre
+score joueur 1
+score joueur 2
+changement de tour
+
+partie perdue
+
+animation de déplacement
+animation de joueur actif
+
+*/
+body {
+    background-color: black;
+}
+
+#jeu {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    margin: 10px 0px;
+    background: black;
+}
+
+#titre {
+    display: inline-block;
+    background: black;
+    text-align: center;
+    text-shadow: 2px 2px red;
+    width: 100%;
+    height: 10%;
+    color: white;
+}
+
+
+.cote {
+    /*display: flex;*/
+    flex-grow: 1;
+    background: black;
+    text-align: center;
+    width: 200px;
+
+    height: auto;
+    color: white;
+    border: 2px red solid;
+    border-radius: 5px 5px;
+    margin: 10px 10px;
+    min-width: 150px;
+}
+
+#cotedroit {
+    order: 1;
+}
+
+#cotegauche {
+    order: 3;
+}
+
+
+#tableau {
+    display: flex;
+    /*display:block;*/
+    flex-direction: column;
+    flex-grow: 8;
+    order: 2;
+    width: 50%;
+    /*
+    min-width: 400px;*/
+    border: 1px solid white;
+    margin: 0 auto;
+    background: white;
+    position: relative;
+    min-height: 420px;
+    height: auto;
+}
+
+#instruction {
+    color: white;
+}
+
+
+
+.row {
+    background: white;
+
+    min-height: 40px;
+
+    display: flex;
+}
+
+.cell {
+    display: flex;
+    width: 100px;
+    min-width: 40px;
+    min-height: 40px;
+    background: radial-gradient(white 5%, blue 200%, white 60%);
+    border: 1px solid black;
+    border-radius: 14%;
+
+    position: relative;
+
+
+}
+
+.mur {
+    background: black;
+    z-index: 1000;
+
+}
+
+.cases img {
+    display: flex;
+    width: 38px;
+    height: 38px;
+    z-index: 200;
+}
+
+
+
+.joueur1 {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 14%;
+    z-index: 400;
+
+}
+
+
+.joueur2 {
+    position: absolute;
+
+    border: 1px solid black;
+    border-radius: 14%;
+    z-index: 400;
+}
+
+.cliquable {
+
+    background: radial-gradient(white 5%, red 200%, white 60%);
+    z-index: 0;
+}
+
+.cliquable:hover {
+    background: radial-gradient(white 5%, purple 100%, white 60%);
+    z-index: 0;
+}
+
+#board {
+    background-color: aqua;
+    width: 400px;
+    height: auto;
+}
+
+/
+@media screen and (max-width: 766px) {
+    #cotedroit {
+        order: 1;
+    }
+
+    #cotegauche {
+        order: 2;
+    }
+
+    #tableau {
+        order: 3;
+    }
+}
+
+@media screen and (max-width: 1116px) {
+    #cotedroit {
+        order: 1;
+    }
+
+    #cotegauche {
+        order: 2;
+    }
+
+    #tableau {
+        order: 3;
+    }
+}
