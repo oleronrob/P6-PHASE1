@@ -11,5 +11,5 @@ class Player {
     }
 
 }
-let Player1 = new Player("", "player1", "", "", "./pictures/player1", Weapon0, "move")
-let Player2 = new Player("", "player2", "", "", "./pictures/player2", Weapon0, "move")
+let Player1 = new Player("", "player1", "", "", "./pictures/player1.png", Weapon0, "move")
+let Player2 = new Player("", "player2", "", "", "./pictures/player2.png", Weapon0, "move")

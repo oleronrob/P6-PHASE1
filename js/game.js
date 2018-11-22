@@ -17,7 +17,7 @@ class Game {
         let $header = $('<header><div id="title"><h1></h1></div></header>')
         let $main = $('<main></main>')
         let $game = $('<div id="game" class="container"></div>')
-        let $board = $('<div id="board"></div>')
+        let $board = $('<div id="board" class="container"></div>')
         let $infoplayer = $('<div id="infoplayer1" class="infoplayer"></div><div id="infoplayer2" class="infoplayer"></div>')
         let $footer = $('<footer><div id="instruction"><h1>------ INSTRUCTIONS -------</h1></div></footer>')
         $header.appendTo($("body"))
@@ -31,3 +31,10 @@ class Game {
 }
 
 let myGame = new Game()
+$(window).resize(function () {
+    $(".cell").css("height", $(".cell").css("width"))
+    $(".cell img, #player1, #player2").css({
+        "width": $(".cell").css("width"),
+        "height": $(".cell").css("height")
+    })
+})
