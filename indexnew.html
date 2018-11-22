@@ -12,36 +12,34 @@
 
 <body>
     <header>
-        <div id="titre">
+        <div id="title">
             <h1></h1>
         </div>
     </header>
     <main>
-        <div id="jeu" class="container">
-            <div id="cotedroit" class="cote"></div>
-
-
-            <div id="tableau"></div>
-            <div id="cotegauche" class="cote"></div>
-
-
-            </div>
-
-
+        <div id="game" class="container">
+            <div id="infoplayer1" class="infoplayer"></div>
+            <div id="board"></div>
+            <div id="infoplayer2" class="infoplayer"></div>
+        </div>
     </main>
     <footer>
         <div id="instruction">
             <h1>------ INSTRUCTIONS -------</h1>
         </div>
     </footer>
+    <script>
+        $(document).ready(function() {
+            myGame.init()
+            Board.draw()
+        })
 
+    </script>
 </body>
-<!--<script src="script.js"></script>
-<script src="deplacement.js"></script>-->
-<script src="./js/board.js"></script>
+<script src="./js/weapon.js"></script>
 <script src="./js/cell.js"></script>
 <script src="./js/player.js"></script>
-<script src="./js/weapon.js"></script>
 <script src="./js/game.js"></script>
+<script src="./js/board.js"></script>
 
 </html>
