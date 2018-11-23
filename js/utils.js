@@ -1,6 +1,6 @@
-function caseAleatoire() {
+function randomCell() {
 
-    return (Math.floor((Math.random() * nbLignes * nbColonnes))).toString();
+    return ('#'+(Math.floor((Math.random() * nbRows * nbCols))).toString());
 };
 
 // test si une case est libre

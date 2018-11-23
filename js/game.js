@@ -4,6 +4,7 @@ let nbRows = 10,
     nbCols = 10
 let nbWeapons = 4
 let tabboard = []
+let nbWalls = 10
 
 
 // class game

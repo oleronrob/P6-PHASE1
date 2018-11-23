@@ -109,7 +109,7 @@ body {
     position: relative;
 }
 
-.mur {
+.wall {
     background: black;
     z-index: 1000;
 }
