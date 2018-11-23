@@ -3,6 +3,7 @@ let gametitle = "OC WAR GAME"
 let nbRows = 10,
     nbCols = 10
 let nbWeapons = 4
+let tabboard = []
 
 
 // class game
