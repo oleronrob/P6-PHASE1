@@ -1,6 +1,7 @@
 function randomCell() {
-
-    return ('#'+(Math.floor((Math.random() * nbRows * nbCols))).toString());
+    let x = Math.floor((Math.random() * nbRows * nbCols))
+    let id = [('#'+ x.toString()), Math.floor(x / nbRows), Math.floor(x % nbCols)]
+    return id;
 };
 
 // test si une case est libre
@@ -33,7 +34,7 @@ function cellFreeForWall(cell) {
 
 
 function resizeCellsOnBoard () {
-    let maxcellsize = ($(window).outerHeight() - $('header').outerHeight() - 50) / nbRows
+    let maxcellsize = ($(window).outerHeight() - $('header').outerHeight() - 200) / nbRows
     $('.cell').css({
         'max-height': maxcellsize + "px",
         'max-width': maxcellsize + "px"
@@ -42,8 +43,9 @@ function resizeCellsOnBoard () {
     $('#board').css({
         'max-width': maxboardsize + "px"
     })
+ $(".cell").css("width", $(".row").css("height"));
+    $(".cell").css("height", $(".row").css("height"));
 
-    $(".cell").css("height", $(".cell").css("width"));
     $(".cell img, #player1, #player2").css({
         "width": $(".cell").css("width"),
         "height": $(".cell").css("height")

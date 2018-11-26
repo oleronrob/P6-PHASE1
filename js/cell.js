@@ -5,6 +5,8 @@ class cellOfBoard{
         this.freeForWall = freeForWall
         this.freeForWeapon = freeForWeapon
         this.freeForPlayer = freeForPlayer
+        this.weapon = 0
+        this.player = 0
     }
     hasWall(){
         return this.hasClass('wall')
@@ -15,10 +17,10 @@ class cellOfBoard{
     hasPlayer(){
         return this.hasClass('player')
     }
-    putWallOnCell(){
+    anaivalableCell(){
         this.freeForWall = false
         this.freeForPlayer = false
         this.freeForWeapon = false
-        this.addClass('wall')
+        //this.addClass('wall')
     }
 }

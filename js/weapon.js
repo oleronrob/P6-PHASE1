@@ -5,15 +5,16 @@ class Weapon {
         this.picture = image;
     }
 
-    displayweapons() {
-        for (let i = 1; i <= nbWeapons; i++) {
-            let choixCase = caseAleatoire();
-            $(testcase).append("<img></img>").addClass(this.name);
-            $(testcase).children().attr("src", this.picture);
-            $(testcase).parent().addClass("weapon");
-            $(testcase).arme = this;
-        }
+    draw(id) {
+        $(id).append("<img></img>").addClass("anavailable " + this.name);
+        $(id).children().attr("src", this.picture);
+        $(id).arme = this;
+        //tabboard[id[1]][id[2]].anaivalableCell()
+
     }
+
+
+
 
     weaponPrise(selectCase, lastWeapon, nextWeapon) {
         $(selectCase).arme = nextWeapon
@@ -29,3 +30,4 @@ let Weapon1 = new Weapon("weapon1", 15, "./pictures/weapon1.png");
 let Weapon2 = new Weapon("weapon2", 20, "./pictures/weapon2.png");
 let Weapon3 = new Weapon("weapon3", 25, "./pictures/weapon3.png");
 let Weapon4 = new Weapon("weapon4", 30, "./pictures/weapon4.png");
+let tabweapon = [Weapon0, Weapon1, Weapon2, Weapon3, Weapon4]
