@@ -6,15 +6,15 @@ class Weapon {
     }
 
     draw(id) {
-        $(id).append("<img></img>").addClass("anavailable " + this.name);
-        $(id).children().attr("src", this.picture);
-        $(id).arme = this;
+        //$(id).append("<img></img>").addClass("anavailable " + this.name);
+        //$(id).children().attr("src", this.picture);
+        //$(id).arme = this;
         //tabboard[id[1]][id[2]].anaivalableCell()
-
+        let pictWeapon = 'url('+ this.picture + ') no-repeat, radial-gradient(white 5%, blue 200%, white 60%)'
+        $(id).css('background', pictWeapon)
+        $(id).css('background-size', "cover")
+        $(id).addClass("anavailable weapon "+ this.name)
     }
-
-
-
 
     weaponPrise(selectCase, lastWeapon, nextWeapon) {
         $(selectCase).arme = nextWeapon

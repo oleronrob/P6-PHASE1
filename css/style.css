@@ -83,7 +83,7 @@ body {
     margin: 0 auto;
     background: white;
     position: relative;
-    min-height: 420px;
+    min-height: 400px;
     height: auto;
 }
 
@@ -93,7 +93,7 @@ body {
 
 .row {
     background: white;
-    min-height: 40px;
+    /*min-height: 40px;*/
     display: flex;
 }
 
@@ -101,6 +101,7 @@ body {
     display: flex;
     flex-grow: 1;
     /*width: auto;*/
+    height: inherit;
     min-width: 40px;
     min-height: 40px;
     background: radial-gradient(white 5%, blue 200%, white 60%);
@@ -109,6 +110,9 @@ body {
     position: relative;
 }
 
+.weapon{
+
+}
 .wall {
     background: black;
     z-index: 1000;
@@ -116,13 +120,17 @@ body {
 
 .cell img {
     display: flex;
-    width: 38px;
-    height: 38px;
+    width: inherit;
+    height: inherit;
+
     z-index: 200;
 }
-
+/*width: 38px;
+    height: 38px;*/
 .player {
-    position: absolute;
+    width: inherit;
+    height: inherit;
+    /*position: absolute;*/
     border: 1px solid black;
     border-radius: 14%;
     z-index: 400;
@@ -133,7 +141,13 @@ body {
     transform: scale(1.5, 1.5);
 }
 
-.player2 {}
+.player2, .player1 {
+    width: inherit;
+    height: inherit;
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 14%;
+}
 
 .cliquable {
     background: radial-gradient(white 5%, red 200%, white 60%);

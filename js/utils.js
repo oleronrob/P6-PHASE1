@@ -1,6 +1,6 @@
 function randomCell() {
     let x = Math.floor((Math.random() * nbRows * nbCols))
-    let id = [('#'+ x.toString()), Math.floor(x / nbRows), Math.floor(x % nbCols)]
+    let id = [('#' + x.toString()), Math.floor(x / nbRows), Math.floor(x % nbCols)]
     return id;
 };
 
@@ -33,7 +33,7 @@ function cellFreeForWall(cell) {
 }
 
 
-function resizeCellsOnBoard () {
+function resizeCellsOnBoard() {
     let maxcellsize = ($(window).outerHeight() - $('header').outerHeight() - 200) / nbRows
     $('.cell').css({
         'max-height': maxcellsize + "px",
@@ -43,13 +43,15 @@ function resizeCellsOnBoard () {
     $('#board').css({
         'max-width': maxboardsize + "px"
     })
- $(".cell").css("width", $(".row").css("height"));
-    $(".cell").css("height", $(".row").css("height"));
+    $('.cell').css("height", maxcellsize +"px")
+    $('.cell').css("width", maxcellsize-2 +"px")
+    //$(".cell").css("width", $(".row").css("height"));
+    //$(".cell").css("height", $(".cell").css("height"));
 
-    $(".cell img, #player1, #player2").css({
+    /*$(".cell img, #player1, #player2").css({
         "width": $(".cell").css("width"),
         "height": $(".cell").css("height")
 
-    })
+    })*/
 
 }

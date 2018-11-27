@@ -33,12 +33,14 @@ class Game {
 }
 
 let myGame = new Game()
+
 $(window).resize(function () {
-    $(".cell").css("width", $(".row").css("height"))
+    /*$(".cell").css("width", $(".row").css("height"))
     $(".cell").css("height", $(".row").css("height"))
 
     $(".cell img, #player1, #player2").css({
         "width": $(".cell").css("width"),
         "height": $(".cell").css("height")
-    })
+    })*/
+    resizeCellsOnBoard()
 })

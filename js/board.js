@@ -24,8 +24,9 @@ class myBoard {
             tabboard[i] = itab
             $row.appendTo("#board")
         }
-        resizeCellsOnBoard()
+        //resizeCellsOnBoard()
     }
+
     drawWalls() {
         for (let i = 1; i <= nbWalls; i++) {
             let id = randomCell()
@@ -51,16 +52,16 @@ class myBoard {
         }
     }
     drawPlayers() {
-        for (let i = 0; i <= tabplayers.length-1; i++) {
+        for (let i = 0; i <= tabplayers.length - 1; i++) {
             let id = randomCell()
             if ($(id[0]).hasClass('anavailable')) {
-                console.log(id[0])
+                //console.log(id[0])
                 i--
             } else {
                 tabplayers[i].draw(id)
             }
         }
-       resizeCellsOnBoard()
+        resizeCellsOnBoard()
     }
 
 }
